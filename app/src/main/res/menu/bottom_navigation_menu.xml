@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btn_fragment_gohome"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_24px"
+        android:title="@string/fragment_btn_label1"/>
+
+    <item
+        android:id="@+id/btn_fragment_godiary"
+        android:enabled="true"
+        android:icon="@drawable/ic_create_24px"
+        android:title="@string/fragment_btn_label2"/>
+
+    <item
+        android:id="@+id/btn_fragment_goshop"
+        android:enabled="true"
+        android:icon="@drawable/ic_store_24px"
+        android:title="@string/fragment_btn_label3"/>
+
+    <item
+        android:id="@+id/btn_fragment_gosetting"
+        android:enabled="true"
+        android:icon="@drawable/ic_extension_24px"
+        android:title="@string/fragment_btn_label4"/>
+
+</menu>

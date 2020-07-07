@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MacaronDiary</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">Home Fragment</string>
+    <string name="diary_fragment_label">Diary Fragment</string>
+    <string name="shop_fragment_label">Shop Fragment</string>
+    <string name="setting_fragment_label">Setting Fragment</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="fragment_btn_label1">Home</string>
+    <string name="fragment_btn_label2">Diary</string>
+    <string name="fragment_btn_label3">MacaronShop</string>
+    <string name="fragment_btn_label4">Setting</string>
+
+</resources>
