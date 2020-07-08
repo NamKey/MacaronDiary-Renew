@@ -22,11 +22,12 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.example.macarondiary.fragment.DiaryFragment
+import com.example.macarondiary.fragment.HomeFragment
+import com.example.macarondiary.fragment.SettingFragment
+import com.example.macarondiary.fragment.ShopFragment
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
-
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,7 +45,9 @@ class MainActivity : AppCompatActivity() {
         val shopfragment = ShopFragment()
         val settingfragment = SettingFragment()
 
-
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment_layout,homefragment).commitAllowingStateLoss();
+        }
 
         bottomNavigation.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener {item:MenuItem ->
             when(item.itemId){
