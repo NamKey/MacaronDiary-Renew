@@ -19,4 +19,5 @@
     <string name="fragment_btn_label3">MacaronShop</string>
     <string name="fragment_btn_label4">Setting</string>
 
+    <string name="recycler_view">String</string>
 </resources>
