@@ -26,8 +26,18 @@ import com.example.macarondiary.fragment.DiaryFragment
 import com.example.macarondiary.fragment.HomeFragment
 import com.example.macarondiary.fragment.SettingFragment
 import com.example.macarondiary.fragment.ShopFragment
+import com.example.macarondiary.retrofitdataset.ResponseDiary
+import com.example.macarondiary.retrofitservice.RetrofitService
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+lateinit var retrofitservice: RetrofitService
+lateinit var retrofit: Retrofit
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +45,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
+
+        //Retrofit 초기설정
+        retrofitInitilize()
+
         //View 선언
         var bottomNavigation: BottomNavigationView? = null
         bottomNavigation = findViewById(R.id.bottom_navigation)
@@ -96,5 +110,16 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun retrofitInitilize(){
+        //Retrofit object 생성
+        retrofit = Retrofit.Builder()
+            .baseUrl(getString(R.string.baseURL))
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        //Retrofit Service 등록
+        retrofitservice = retrofit.create(RetrofitService::class.java)
     }
 }
