@@ -26,5 +26,6 @@
     <string name="hello_first_fragment">Home fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="baseURL">http://keydo.ml:8000/macarondiary/</string>
+    <string name="testbaseURL">http://jsonplaceholder.typicode.com/</string>
 
 </resources>

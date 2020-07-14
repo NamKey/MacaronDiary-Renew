@@ -50,8 +50,7 @@ class MainActivity : AppCompatActivity() {
         retrofitInitilize()
 
         //View 선언
-        var bottomNavigation: BottomNavigationView? = null
-        bottomNavigation = findViewById(R.id.bottom_navigation)
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
         //Fragment 선언
         val homefragment = HomeFragment()
