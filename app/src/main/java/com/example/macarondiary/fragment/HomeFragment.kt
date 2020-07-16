@@ -1,5 +1,6 @@
 package com.example.macarondiary.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.macarondiary.R
+import com.example.macarondiary.WritediaryActivity
 import com.example.macarondiary.retrofitservice
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -35,10 +37,7 @@ class HomeFragment : Fragment() {
 
 
         // get 방식
-
-
-        // get 방식
-        val comment: Call<ResponseBody> = retrofitservice.reqDiaryContent(1,"key","key/","20200714","macaron","contents")
+        val comment: Call<ResponseBody> = retrofitservice.reqDiaryContent(1,"key")
         comment.enqueue(object : Callback<ResponseBody> {
             override fun onResponse(
                 call: Call<ResponseBody>,
@@ -75,7 +74,8 @@ class HomeFragment : Fragment() {
 //                }
 //            })
         view.findViewById<Button>(R.id.button_first).setOnClickListener {
-
+            var goWritediaryIntent = Intent(activity, WritediaryActivity::class.java)
+            startActivity(goWritediaryIntent)
         }
     }
 }

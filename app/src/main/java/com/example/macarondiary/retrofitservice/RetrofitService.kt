@@ -20,7 +20,7 @@ interface RetrofitService {
     ): Call<ResponseBody>
 
     @FormUrlEncoded
-    @POST("/test")
+    @POST("diary")
     fun reqPost(
         @Field("id") id: String,
         @Field("pw") pw: String

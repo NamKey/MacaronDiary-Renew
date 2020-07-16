@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WritediaryActivity">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/writediary_divider"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="30sp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageButton
+                android:id="@+id/ibtn_addphoto"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="10sp"
+                android:scaleType="fitCenter"
+                android:background="#fff"
+                app:srcCompat="@drawable/ic_camera" />
+
+            <ImageView
+                android:id="@+id/iv_macaron1"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="10sp"
+                android:scaleType="fitCenter"
+                android:background="#fff"
+                app:srcCompat="@drawable/ic_imagebtn_macaron" />
+
+            <ImageView
+                android:id="@+id/iv_macaron2"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="10sp"
+                android:scaleType="fitCenter"
+                android:background="#fff"
+                app:srcCompat="@drawable/ic_imagebtn_macaron" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/iv_macaron3"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="10sp"
+                android:scaleType="fitCenter"
+                android:background="#fff"
+                app:srcCompat="@drawable/ic_imagebtn_macaron" />
+
+            <ImageView
+                android:id="@+id/iv_macaron4"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="10sp"
+                android:scaleType="fitCenter"
+                android:background="#fff"
+                app:srcCompat="@drawable/ic_imagebtn_macaron" />
+
+            <ImageView
+                android:id="@+id/iv_macaron5"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="10sp"
+                android:scaleType="fitCenter"
+                android:background="#fff"
+                app:srcCompat="@drawable/ic_imagebtn_macaron" />
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:id="@+id/writediary_divider"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/linV_diaryet"
+        android:layout_marginBottom="10sp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:id="@+id/linV_diaryet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/linH_diarybtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="80sp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/eT_diarytitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:maxEms="4"
+            android:ems="12"
+            android:inputType="textPersonName"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:hint="@string/diaryactivity_ethint_title" />
+
+        <EditText
+            android:id="@+id/eT_diarycontent"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:lines="8"
+            android:maxLines="8"
+            android:maxLength="50"
+            android:layout_weight="1"
+            android:ems="12"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:textAlignment="center"
+            android:hint="@string/diaryactivity_ethint_content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linH_diarybtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/AppTheme.OutlinedButtonIcon"
+            android:id="@+id/btn_diarywrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20sp"
+            android:text="@string/diaryactivity_btntext_confirm"
+            />
+
+        <Button
+            android:id="@+id/btn_diaryclose"
+            style="@style/AppTheme.OutlinedButtonIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:text="@string/diaryactivity_btntext_cancel"
+            app:strokeColor="@color/black50"
+            app:strokeWidth="2sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

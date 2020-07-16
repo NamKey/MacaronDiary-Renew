@@ -25,7 +25,31 @@
 
     <string name="hello_first_fragment">Home fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
     <string name="baseURL">http://keydo.ml:8000/macarondiary/</string>
     <string name="testbaseURL">http://jsonplaceholder.typicode.com/</string>
 
+    <string name="title_activity_writediary">WritediaryActivity</string>
+    <string name="title_activity_shop">ShopActivity</string>
+
+    <string name="diaryactivity_ethint_title">4자로 맛을 표현해보세요</string>
+    <string name="diaryactivity_ethint_content">오늘의 마카롱은?</string>
+    <string name="diaryactivity_btntext_confirm">저장</string>
+    <string name="diaryactivity_btntext_cancel">취소</string>
+
+
+
+    <string name="file_provider" translatable="false">com.example.macarondiary.fileprovider</string>
+
+    <string name="pick_single">사진을 선택해주세요</string>
+
+    <plurals name="pick_multi">
+        <item quantity="one">1개 선택됨</item>
+        <item quantity="other">%1$d개 선택됨</item>
+    </plurals>
+    <plurals name="pick_multi_more">
+        <item quantity="one">1개 이상 선택해주세요</item>
+        <item quantity="other">%1$d개 이상 선택해주세요</item>
+    </plurals>
+    <string name="pick_multi_limit">%1$d개 이상의 사진을 올릴 수 없습니다.</string>
 </resources>

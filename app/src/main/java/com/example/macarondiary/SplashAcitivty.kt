@@ -18,16 +18,15 @@ class SplashAcitivty : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val mainImagesplash = findViewById<ImageView>(R.id.splash_imageView)
-
         //Animation Splash
+//        val mainImagesplash = findViewById<ImageView>(R.id.splash_imageView)
 
         //No Animation splash
         Handler().postDelayed(Runnable {
             val intentGomain = Intent(this,MainActivity::class.java)
             startActivity(intentGomain)
             finish()
-        },3000)
+        },1000)
 
 
     }

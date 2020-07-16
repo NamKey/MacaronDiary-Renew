@@ -17,10 +17,12 @@
 package com.example.macarondiary
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.macarondiary.fragment.DiaryFragment
 import com.example.macarondiary.fragment.HomeFragment
@@ -111,7 +113,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun retrofitInitilize(){
+    private fun retrofitInitilize(){
         //Retrofit object 생성
         retrofit = Retrofit.Builder()
             .baseUrl(getString(R.string.baseURL))

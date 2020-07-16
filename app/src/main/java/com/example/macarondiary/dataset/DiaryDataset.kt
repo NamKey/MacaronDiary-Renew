@@ -1,6 +1,6 @@
 package com.example.macarondiary.dataset
 
-class recycler_Dataset(
+class DiaryDataset(
     var diary_title: String,
     var diary_shopname: String,
     var diary_date: String,

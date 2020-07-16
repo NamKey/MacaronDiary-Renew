@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macarondiary.R
-import com.example.macarondiary.adapter.MyAdapter
-import com.example.macarondiary.dataset.recycler_Dataset
+import com.example.macarondiary.adapter.DiaryAdapter
+import com.example.macarondiary.dataset.DiaryDataset
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -18,10 +20,10 @@ class DiaryFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
     private lateinit var viewManager: RecyclerView.LayoutManager
-    var datalist = arrayListOf<recycler_Dataset>()
-    var diary1 = recycler_Dataset(diary_title = "Macaron1",diary_shopname = "shop1",diary_date = "020202",diary_imagepath = "file",diary_content = "Hello")
-    var diary2 = recycler_Dataset(diary_title = "Macaron2",diary_shopname = "shop2",diary_date = "020202",diary_imagepath = "file",diary_content = "Hello")
-    var diary3 = recycler_Dataset(diary_title = "Macaron3",diary_shopname = "shop3",diary_date = "020202",diary_imagepath = "file",diary_content = "Hello")
+    var datalist = arrayListOf<DiaryDataset>()
+    var diary1 = DiaryDataset(diary_title = "Macaron1",diary_shopname = "shop1",diary_date = "020202",diary_imagepath = "file",diary_content = "Hello")
+    var diary2 = DiaryDataset(diary_title = "Macaron2",diary_shopname = "shop2",diary_date = "020202",diary_imagepath = "file",diary_content = "Hello")
+    var diary3 = DiaryDataset(diary_title = "Macaron3",diary_shopname = "shop3",diary_date = "020202",diary_imagepath = "file",diary_content = "Hello")
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +37,7 @@ class DiaryFragment : Fragment() {
         datalist.add(diary2)
         datalist.add(diary3)
         viewManager = LinearLayoutManager(view.context)
-        viewAdapter = MyAdapter(view.context,datalist)
+        viewAdapter = DiaryAdapter(view.context,datalist)
         recyclerView = view.findViewById<RecyclerView>(R.id.diary_recyclerview).apply {
             setHasFixedSize(true)
             layoutManager = viewManager
