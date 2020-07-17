@@ -32,11 +32,12 @@ interface RetrofitService {
     ): Call<ResponseBody>
 
     @Multipart
-    @Headers("accept: application/json", "content-type: application/json")
     @POST("diary")
     fun reqdiaryimageWrite(
-        @Part diaryimages: ArrayList<MultipartBody.Part>,
-        @Part("hashmap") diaryhashmap: RequestBody
+        @Part diaryimages: List<MultipartBody.Part>,
+        @Part("diaryhashmap") diaryhashmap: HashMap<String,Any>
+
+//        @Part("hashmap") diaryhashmap: RequestBody
     ): Call<ResponseBody>
 
 //    @FormUrlEncoded

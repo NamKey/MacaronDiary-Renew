@@ -46,7 +46,7 @@ lateinit var li_urimacaronphoto: List<Uri>
 
 lateinit var reqwritediary: ResponseDiary
 lateinit var reqwritediary_service: RetrofitService
-lateinit var diaryimages: ArrayList<MultipartBody.Part>
+lateinit var diaryimages: List<MultipartBody.Part>
 
 class WritediaryActivity : AppCompatActivity()
     , BottomSheetImagePicker.OnImagesSelectedListener
@@ -105,8 +105,8 @@ class WritediaryActivity : AppCompatActivity()
                 MediaType.parse("image/*")
                 , diaryimage)
 
-            diaryimages.add(
-                MultipartBody.Part.createFormData("imagefile"
+            (diaryimages as ArrayList<MultipartBody.Part>).add(
+                MultipartBody.Part.createFormData("${i-1}"
                 , diaryimage.name
                 , diaryreqBody))
         }
@@ -123,19 +123,15 @@ class WritediaryActivity : AppCompatActivity()
                 diaryhashmap["diaryshopname"] = eT_diaryshopname.text.toString()
                 diaryhashmap["diarydate"] = "2020-07-17"
 
-                val rbdiaryhashmap = RequestBody.create(
-                    MediaType.parse("text/plain")
-                    , diaryhashmap.toString())
-
 //                val diaryimage: InputStream? = contentResolver.openInputStream(li_urimacaronphoto[0])
-                Log.d("Retrofit",getImagePath(li_urimacaronphoto[0],applicationContext).toString())
+//                Log.d("Retrofit",getImagePath(li_urimacaronphoto[0],applicationContext).toString())
 
 //                val diaryreqBody =  RequestBody.create(MediaType.parse("multipart/form-data"), diaryimagefile)
 //                val uploadFile = MultipartBody.Part.createFormData("file", diaryimagefile.name, diaryreqBody);
-
+                Log.d("Retrofit",diaryhashmap.toString())
                 val testwritediaryreq: Call<ResponseBody> = reqwritediary_service.reqdiaryimageWrite(
-                    diaryimages
-                    ,rbdiaryhashmap)
+                    diaryimages,
+                    diaryhashmap)
 
                 testwritediaryreq.enqueue(object  : Callback<ResponseBody>{
                     override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
@@ -148,7 +144,7 @@ class WritediaryActivity : AppCompatActivity()
                     override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                         Log.d("Retrofit", response.body()!!.string())
                         Toast.makeText(applicationContext,"일기가 저장되었습니다",Toast.LENGTH_SHORT).show()
-                        finish()
+//                        finish()
                     }
                 })
             }//btn_writeend
