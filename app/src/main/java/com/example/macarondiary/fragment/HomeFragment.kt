@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
                 response: Response<ResponseBody>
             ) {
                 try {
-                    Log.v("Test", response.body()!!.string())
+                    Log.d("Retrofit", response.body()!!.string())
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
@@ -56,26 +56,9 @@ class HomeFragment : Fragment() {
             ) {
             }
         })
-        //activity retrofitservice
-//        retrofitservice.reqDiaryContent(
-//            1
-//            ,"key"
-//            ,"/key"
-//            ,"20200715"
-//            ,"macaron"
-//            ,"안녕하세요")
-//            .enqueue(object : Callback<ResponseDiary> {
-//                override fun onFailure(call: Call<ResponseDiary>?, t: Throwable) {
-//                    Log.e("retrofit",t.toString())
-//                }
-//
-//                override fun onResponse(call: Call<ResponseDiary>?, response: Response<ResponseDiary>) {
-//                    Log.e("retrofit",response.body().toString())
-//                }
-//            })
+
         view.findViewById<Button>(R.id.button_first).setOnClickListener {
-            var goWritediaryIntent = Intent(activity, WritediaryActivity::class.java)
-            startActivity(goWritediaryIntent)
+            startActivity(Intent(activity, WritediaryActivity::class.java))
         }
     }
 }

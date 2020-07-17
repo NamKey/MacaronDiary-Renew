@@ -1,7 +1,11 @@
 package com.example.macarondiary.retrofitservice
 
+import com.example.macarondiary.retrofitdataset.RequestJSONDiary
 import com.example.macarondiary.retrofitdataset.ResponseDiary
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import okhttp3.ResponseBody
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -15,16 +19,44 @@ interface RetrofitService {
 
     @GET("diary")
     fun reqDiaryContent(
-        @Query("review_id") review_id: Int,
-        @Query("user_id") user_id: String
+        @Query("review_id") reviewid: Int,
+        @Query("user_id") userid: String
     ): Call<ResponseBody>
 
-    @FormUrlEncoded
+
+
+    @Headers("accept: application/json", "content-type: application/json")
     @POST("diary")
-    fun reqPost(
-        @Field("id") id: String,
-        @Field("pw") pw: String
-    ): Call<ResponseDiary>
+    fun reqdiaryWrite(
+         @Body body: HashMap<String, Any>
+    ): Call<ResponseBody>
+
+    @Multipart
+    @Headers("accept: application/json", "content-type: application/json")
+    @POST("diary")
+    fun reqdiaryimageWrite(
+        @Part diaryimages: ArrayList<MultipartBody.Part>,
+        @Part("hashmap") diaryhashmap: RequestBody
+    ): Call<ResponseBody>
+
+//    @FormUrlEncoded
+//    @Headers("accept: application/json", "content-type: application/json")
+//    @POST("diary")
+//    fun reqdiaryWrite(
+//         @Body body: ResponseDiary
+//    ): Call<ResponseDiary>
+
+
+//    @FormUrlEncoded
+//    @Headers("accept: application/json", "content-type: application/json")
+//    @POST("diary")
+//    fun reqdiaryWrite(
+//        @Field("diary_title") diarytitle: String,
+//        @Field("diary_shopname") diaryshopname: String,
+//        @Field("diary_date") diarydate: String,
+//        @Field("diary_content") diarycontent: String,
+//        @Field("diary_imagepath") diaryimagepath: String
+//    ): Call<ResponseDiary>
 
 
 //    @PUT("/test")

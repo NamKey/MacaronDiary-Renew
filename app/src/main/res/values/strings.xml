@@ -32,7 +32,8 @@
     <string name="title_activity_writediary">WritediaryActivity</string>
     <string name="title_activity_shop">ShopActivity</string>
 
-    <string name="diaryactivity_ethint_title">4자로 맛을 표현해보세요</string>
+    <string name="diaryactivity_ethint_title">4글자로 맛을 표현해보세요</string>
+    <string name="diaryactivity_ethint_shopname">마카롱집 이름</string>
     <string name="diaryactivity_ethint_content">오늘의 마카롱은?</string>
     <string name="diaryactivity_btntext_confirm">저장</string>
     <string name="diaryactivity_btntext_cancel">취소</string>
