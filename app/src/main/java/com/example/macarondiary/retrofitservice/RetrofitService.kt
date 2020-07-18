@@ -11,33 +11,38 @@ import retrofit2.http.*
 
 
 interface RetrofitService {
+    //DiaryFragment get diary List
+//    @GET("diary")
+//    fun reqDiaryList(
+//        @Query("userid") userid: String
+//    ): Call<List<ResponseBody>>
+//
+//    //DiaryActivity get diary detail
+//    @GET("diary")
+//    fun reqDiaryContent(
+//        @Query("diarypk") diarypk: Int,
+//        @Query("userid") userid: String
+//    ): Call<ResponseBody>
 
-    @GET("comments")
-    fun getComment(
-        @Query("postId") postId: Int
-    ): Call<ResponseBody>
+    //DiaryFragment get diary List
+    @GET("diary/{userid}")
+    fun reqDiaryList(
+        @Query("userid") userid: String
+    ): Call<List<ResponseDiary>>
 
-    @GET("diary")
+    //DiaryActivity get diary detail
+    @GET("diary/{userid}/{diarypk}")
     fun reqDiaryContent(
-        @Query("review_id") reviewid: Int,
-        @Query("user_id") userid: String
-    ): Call<ResponseBody>
+        @Path("diarypk") diarypk: Int,
+        @Path("userid") userid: String
+    ): Call<ResponseDiary>
 
-
-
-    @Headers("accept: application/json", "content-type: application/json")
-    @POST("diary")
-    fun reqdiaryWrite(
-         @Body body: HashMap<String, Any>
-    ): Call<ResponseBody>
-
+    //WriteActivity write diary with multiple images
     @Multipart
     @POST("diary")
     fun reqdiaryimageWrite(
         @Part diaryimages: List<MultipartBody.Part>,
         @Part("diaryhashmap") diaryhashmap: HashMap<String,Any>
-
-//        @Part("hashmap") diaryhashmap: RequestBody
     ): Call<ResponseBody>
 
 //    @FormUrlEncoded

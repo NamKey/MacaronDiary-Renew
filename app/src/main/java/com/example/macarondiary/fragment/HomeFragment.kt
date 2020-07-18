@@ -37,28 +37,24 @@ class HomeFragment : Fragment() {
 
 
         // get 방식
-        val comment: Call<ResponseBody> = retrofitservice.reqDiaryContent(1,"key")
-        comment.enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(
-                call: Call<ResponseBody>,
-                response: Response<ResponseBody>
-            ) {
-                try {
-                    Log.d("Retrofit", response.body()!!.string())
-                } catch (e: IOException) {
-                    e.printStackTrace()
-                }
-            }
-
-            override fun onFailure(
-                call: Call<ResponseBody>,
-                t: Throwable
-            ) {
-            }
-        })
-
-        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-            startActivity(Intent(activity, WritediaryActivity::class.java))
-        }
+//        val comment: Call<ResponseBody> = retrofitservice.reqDiaryContent(1,"key")
+//        comment.enqueue(object : Callback<ResponseBody> {
+//            override fun onResponse(
+//                call: Call<ResponseBody>,
+//                response: Response<ResponseBody>
+//            ) {
+//                try {
+////                    Log.d("Retrofit", response.body()!!.string())
+//                } catch (e: IOException) {
+//                    e.printStackTrace()
+//                }
+//            }
+//
+//            override fun onFailure(
+//                call: Call<ResponseBody>,
+//                t: Throwable
+//            ) {
+//            }
+//        })
     }
 }

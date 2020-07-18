@@ -12,6 +12,7 @@
         android:layout_height="60sp"
         android:layout_margin="5sp"
         android:src="@drawable/ic_macaron"
+        android:adjustViewBounds="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/diary_title"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +52,7 @@
         android:id="@+id/diary_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10sp"
         android:text="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
