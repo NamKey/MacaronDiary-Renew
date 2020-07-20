@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.macarondiary">
+    package="com.keydo.macarondiary">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        >
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.BillingActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.macarondiary"
+            android:authorities="com.keydo.macarondiary"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -28,20 +33,19 @@
         </provider>
 
         <activity
-            android:name=".ShopActivity"
+            android:name=".activity.ShopActivity"
             android:label="@string/title_activity_shop" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
         <activity
-            android:name=".WritediaryActivity"
+            android:name=".activity.WritediaryActivity"
             android:label="@string/title_activity_writediary"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".DiaryActivity" />
+        <activity android:name=".activity.DiaryActivity" />
         <activity
-            android:name=".SplashAcitivty"
+            android:name=".activity.SplashAcitivty"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +54,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

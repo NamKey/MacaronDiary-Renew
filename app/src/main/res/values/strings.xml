@@ -38,7 +38,11 @@
     <string name="diaryactivity_btntext_confirm">저장</string>
     <string name="diaryactivity_btntext_cancel">취소</string>
 
+    <string name="admob_app_id">ca-app-pub-2421954146060515~1650070624</string>
+    <string name="banner_ad_unit_id">ca-app-pub-2421954146060515/9959148947</string>
+    <string name="banner_ad_unit_id_for_test">ca-app-pub-3940256099942544/6300978111</string>
 
+    <string name="shopmain">서비스 준비중입니다</string>
 
     <string name="file_provider" translatable="false">com.example.macarondiary.fileprovider</string>
 
@@ -53,4 +57,10 @@
         <item quantity="other">%1$d개 이상 선택해주세요</item>
     </plurals>
     <string name="pick_multi_limit">%1$d개 이상의 사진을 올릴 수 없습니다.</string>
+
+    <string name="licensekey">
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkQGsuQUEjNH3Ugcm+QMPl+EyyNviT7YreVt4cD2+5fgGqjGykvdWIayIMW11zyZ/HbJwCIoRFTo90A2bJbQnGKa7KwiZzy1bIOyyL8/lNiwhHAtUYHxG02+DoigbH718BsTl8ZVogHRyddenDow+l5SkKsIGgmX65TT6vWDTdjS0duOHXwSfceUDNiDpWJb+VaZqNtWvghDakGv7YuXQK1bfYzQL0g1H5qsk4UdHrJ+ax7qQCvfbPZ+8rjN9Ih1XN1FwEdYenr4TUVG2EFLZGz9kVoDHGo/BVZG9Xbcnn+Oak0t6Q5UIf6/4ish5/Dz/kCY8H9RY6ayVuLibGd9f0QIDAQAB
+    </string>
+    <string name="btn_noads">광고 제거하기</string>
+    <string name="btn_donate">개발자 후원하기</string>
 </resources>

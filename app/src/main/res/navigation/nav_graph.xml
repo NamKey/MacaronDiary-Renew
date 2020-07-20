@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/HomeFragment"
-        android:name="com.example.macarondiary.fragment.HomeFragment"
+        android:name="com.keydo.macarondiary.fragment.HomeFragment"
         android:label="@string/home_fragment_label"
         tools:layout="@layout/fragment_home">
 
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/DiaryFragment"
-        android:name="com.example.macarondiary.fragment.HomeFragment"
+        android:name="com.keydo.macarondiary.fragment.HomeFragment"
         android:label="@string/diary_fragment_label"
         tools:layout="@layout/fragment_home">
 
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/ShopFragment"
-        android:name="com.example.macarondiary.fragment.HomeFragment"
+        android:name="com.keydo.macarondiary.fragment.HomeFragment"
         android:label="@string/shop_fragment_label"
         tools:layout="@layout/fragment_home">
 
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/SettingFragment"
-        android:name="com.example.macarondiary.fragment.DiaryFragment"
+        android:name="com.keydo.macarondiary.fragment.DiaryFragment"
         android:label="@string/setting_fragment_label"
         tools:layout="@layout/fragment_diary">
     </fragment>

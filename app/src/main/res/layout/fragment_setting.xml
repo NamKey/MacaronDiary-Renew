@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <Button
+            android:id="@+id/btn_donatedeveloper"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_heart"
+            android:text="@string/btn_donate"
+            android:padding="10sp"
+            app:srcCompat="@drawable/ic_imagebtn_macaron"
+            android:background="@drawable/setting_btn_background"/>
+
+        <Button
+            android:id="@+id/btn_noads"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:drawableStart="@drawable/ic_promotion"
+            android:text="@string/btn_noads"
+            android:padding="10sp"
+            app:srcCompat="@drawable/ic_imagebtn_macaron"
+            android:background="@drawable/setting_btn_background"
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
